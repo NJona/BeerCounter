@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      User
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <button ion-button block (click)="callAddUserPage()">Add User</button>    
+      <ion-list *ngIf="users" margin-top>
+        <ion-item-sliding *ngFor="let user of users">
+          <ion-item (click)="callUserDetails(user)" *ngIf="activeAdmin && !(activeAdmin._id == user._id)">
+            <ion-row>
+              <ion-col align-self-start>
+                <h2 text-left>{{user.name}}</h2>
+              </ion-col>
+              <ion-col align-self-end>
+                <h2 text-right>{{user.counter}}</h2>
+              </ion-col>
+            </ion-row>
+          </ion-item>
+        </ion-item-sliding>
+    </ion-list>
+</ion-content>

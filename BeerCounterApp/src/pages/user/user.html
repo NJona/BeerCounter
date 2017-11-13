@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Hallo {{activeUser.name}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card>
+        <ion-card-header>
+            <h1>Counter:</h1>
+        </ion-card-header>
+        <ion-card-content>
+            <h2>Du hast aktuell {{activeUser.counter}} Bier auf der Liste!</h2>
+            <h2 *ngIf="available">Insgesamt sind noch {{available.available}} Bier verfügbar.</h2>
+        </ion-card-content>
+    </ion-card>
+    <button ion-button block margin-top (click)="incrementCounter()" *ngIf="available" [attr.disabled]="available.available==0?'':null">Bier!</button>
+    <button ion-button block (click)="changePassword()">Passwort ändern</button>
+</ion-content>

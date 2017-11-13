@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Hallo {{activeAdmin.name}}!
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card>
+        <ion-card-header>
+            Counter:
+        </ion-card-header>
+        <ion-card-content *ngIf="activeAdmin">
+            Du hast aktuell {{activeAdmin.counter}} Bier auf der Liste!
+        </ion-card-content>
+        <ion-item padding-horizontal>
+          <button ion-button block (click)="incrementCounter()" *ngIf="available" [attr.disabled]="available.available==0?'':null">Bier!</button>
+          <button ion-button block (click)="setCounter()">Set Counter</button>
+          <button ion-button block (click)="resetCounter()">Reset Counter</button>
+        </ion-item>
+    </ion-card>
+    <ion-card>
+        <ion-card-header *ngIf="available">
+            Verfügbares Bier: {{available.available}}
+        </ion-card-header>
+        <ion-item padding-horizontal>
+          <button ion-button block (click)="setAvailable()">Set available</button>
+        </ion-item>
+    </ion-card>
+</ion-content>

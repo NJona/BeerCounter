@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-title>
+      Hallo {{user.name}}
+    </ion-title>
+        <ion-buttons end>
+            <button (click)="logout()">Logout</button>
+        </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-tabs #myTabs>
+    <ion-tab [root]="tab1" [rootParams]="user" tabTitle="Overview"></ion-tab>
+    <ion-tab [root]="tab2" [rootParams]="user" tabTitle="Userlist"></ion-tab>
+</ion-tabs>

@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{user.name}} bearbeiten
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+      <ion-list *ngIf="user">
+        <ion-item>
+          <h2>{{user.name}}: {{user.counter}}</h2>
+        </ion-item>
+    </ion-list>
+    <button ion-button block (click)="resetCounter()">Reset Counter</button>
+    <button ion-button block (click)="setCounter()">Set Counter</button>
+    <button ion-button block (click)="deleteUser()">Delete User</button>
+    <button ion-button block (click)="cancel()">Cancel</button>
+</ion-content>

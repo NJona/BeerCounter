@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Beer Counter Login
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-label floating>Name</ion-label>
+            <ion-input type="text" [(ngModel)]="name" required></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label floating>Password</ion-label>
+            <ion-input type="password" [(ngModel)]="password" required></ion-input>
+        </ion-item>
+    </ion-list>
+    <button ion-button block (click)="authenticate()">Login</button>
+</ion-content>

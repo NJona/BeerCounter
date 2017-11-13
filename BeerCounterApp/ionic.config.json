@@ -1,0 +1,8 @@
+{
+  "name": "RESTfulApp",
+  "app_id": "04a58b88",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
