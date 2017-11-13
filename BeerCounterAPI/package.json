@@ -1,0 +1,23 @@
+{
+  "name": "usercounter",
+  "version": "1.0.0",
+  "description": "simple app to count Button Clicks per User",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Jona Neef",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.4",
+    "express": "^4.15.3",
+    "jsonwebtoken": "^7.4.1",
+    "mongoose": "^4.11.1",
+    "morgan": "^1.8.2"
+  }
+}
